@@ -45,22 +45,22 @@ const Footer = () => {
             Nulla elementum eget lectus dapibus amatug mix finibus.
           </p>
           <ul className="flex items-center  gap-4 text-white">
-            <li className="p-3 bg-blue-700 rounded-full">
+            <li className="p-3 bg-blue-700 rounded-full hover:translate-y-2 transition-transform">
               <a href="">
                 <FaFacebook />
               </a>
             </li>
-            <li className="p-3 bg-blue-700 rounded-full">
+            <li className="p-3 bg-blue-700 rounded-full hover:translate-y-2 transition-transform">
               <a href="">
                 <FaInstagram />
               </a>
             </li>
-            <li className="p-3 bg-blue-700 rounded-full">
+            <li className="p-3 bg-blue-700 rounded-full hover:translate-y-2 transition-transform">
               <a href="">
                 <FaYoutube />
               </a>
             </li>
-            <li className="p-3 bg-blue-700 rounded-full">
+            <li className="p-3 bg-blue-700 rounded-full hover:translate-y-2 transition-transform">
               <a href="">
                 <FaTwitter />
               </a>
@@ -79,7 +79,7 @@ const Footer = () => {
                 <a
                   href={item.link}
                   key={item.id}
-                  className="flex gap-4 items-center"
+                  className="flex gap-4 items-center hover:translate-y-2 transition-transform"
                 >
                   <div>
                     <FaChevronRight className="text-blue-800 text-xl" />
@@ -100,7 +100,7 @@ const Footer = () => {
                 <a
                   href={item.link}
                   key={item.id}
-                  className="flex gap-4 items-center"
+                  className="flex gap-4 items-center hover:translate-y-2 transition-transform"
                 >
                   <div>
                     <FaChevronRight className="text-blue-800 text-xl" />
@@ -118,7 +118,10 @@ const Footer = () => {
             </h2>
             {info.map((item) => {
               return (
-                <div key={item.id} className="flex gap-4 items-center">
+                <div
+                  key={item.id}
+                  className="flex gap-4 items-center hover:translate-y-2 transition-transform"
+                >
                   <div className="text-4xl text-blue-700 ">{item.icon}</div>
                   <div className="flex flex-col gap-2">
                     <h2 className="font-bold text-white hover:text-blue-700 text-xl tracking-wide">
