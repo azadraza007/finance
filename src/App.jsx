@@ -1,9 +1,21 @@
-import Footer from './component/Footer'
 
-export default function App() {
-  return (
-    <>
+
+import Footer from './component/Footer'
+function App() {
+  
+return ( <>
+  
+     <div>Hello World</div>
+
       <Footer />
-    </>
-  )
+  </>
+)
+
+
+
+
+  
+
+    
+ 
 }
