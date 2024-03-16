@@ -1,13 +1,21 @@
 
 
+import Footer from './component/Footer'
 function App() {
-  // const [count, setCount] = useState(0)
-
-  return (
-    <>
+  
+return ( <>
+  
      <div>Hello World</div>
-    </>
-  )
-}
 
-export default App
+      <Footer />
+  </>
+)
+
+
+
+
+  
+
+    
+ 
+}
