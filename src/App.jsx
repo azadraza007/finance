@@ -1,7 +1,9 @@
-import Footer from "./component/Footer";
+import Footer from './component/Footer'
 
 export default function App() {
-  return <>
-  <Footer/>
-  </>
+  return (
+    <>
+      <Footer />
+    </>
+  )
 }
