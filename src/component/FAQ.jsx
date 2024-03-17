@@ -1,7 +1,7 @@
 import React from "react";
 
 const FAQ = () => {
-  return <></>;
+  return <div></div>;
 };
 
 export default FAQ;
