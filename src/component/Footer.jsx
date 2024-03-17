@@ -1,46 +1,49 @@
-import React from 'react'
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa6'
-import { FaChevronRight } from 'react-icons/fa'
-import { quickLinks, services } from '../data.js'
-import { CiPhone } from 'react-icons/ci'
-import { IoMailOpenOutline } from 'react-icons/io5'
-import { GrMapLocation } from 'react-icons/gr'
-import { nanoid } from 'nanoid'
+import React from "react";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
+import { FaChevronRight } from "react-icons/fa";
+import { quickLinks, services } from "../data.js";
+import { CiPhone } from "react-icons/ci";
+import { IoMailOpenOutline } from "react-icons/io5";
+import { GrMapLocation } from "react-icons/gr";
+import { nanoid } from "nanoid";
 export let info = [
   {
     id: nanoid(),
-    icon: <CiPhone />,
-    title: 'Phone',
-    content: '786752934875',
+    icon: <CiPhone className="text-white" />,
+    title: "Phone",
+    content: "786752934875",
 
-    url: '#',
+    url: "#",
   },
   {
     id: nanoid(),
-    icon: <IoMailOpenOutline />,
-    title: 'Email',
-    content: 'ahsdfa@gmail.com',
-    url: '#',
+    icon: <IoMailOpenOutline className="text-white" />,
+    title: "Email",
+    content: "ahsdfa@gmail.com",
+    url: "#",
   },
   {
     id: nanoid(),
-    icon: <GrMapLocation />,
-    title: 'Address',
-    content: '99 Roving St., Big City, PKU 23456',
-    url: '#',
+    icon: <GrMapLocation className="text-white" />,
+    title: "Address",
+    content: "99 Roving St., Big City, PKU 23456",
+    url: "#",
   },
-]
+];
 const Footer = () => {
   return (
-    <section className=" bg-blue-400">
-      <div className="w-100 py-4 px-6 bg-blue-400 grid grid-cols-1 lg:grid-cols-2 gap-2">
-        <div className="flex flex-col gap-4">
+    <section style={{ backgroundColor: "#016e95" }}>
+      <div
+        className="w-100 py-4 px-2 grid grid-cols-1 lg:grid-cols-2 gap-2"
+        style={{ backgroundColor: "#016e95" }}
+      >
+        <div className="flex flex-col gap-3">
           <img
             src="https://gtkit.rometheme.pro/gaudit/wp-content/uploads/sites/20/2023/03/Gaudit-Logo.png"
             alt=""
             className="w-80"
           />
-          <p className="text-slate-300 text-xl my-4">
+          <p className="text-slate-300  my-2">
             Donec neque massa, faucibus nec lorem vitae feugiat pharetra sem.
             Nulla elementum eget lectus dapibus amatug mix finibus.
           </p>
@@ -82,13 +85,13 @@ const Footer = () => {
                   className="flex gap-4 items-center hover:translate-y-2 transition-transform"
                 >
                   <div>
-                    <FaChevronRight className="text-blue-800 text-xl" />
+                    <FaChevronRight className="text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-200  hover:text-blue-800 ">
+                  <h3 className=" font-bold text-slate-200  hover:text-red-500 ">
                     {item.title}
                   </h3>
                 </a>
-              )
+              );
             })}
           </div>
           <div className=" flex flex-col gap-3 mt-4">
@@ -103,13 +106,13 @@ const Footer = () => {
                   className="flex gap-4 items-center hover:translate-y-2 transition-transform"
                 >
                   <div>
-                    <FaChevronRight className="text-blue-800 text-xl" />
+                    <FaChevronRight className="text-white " />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-200  hover:text-blue-800 ">
+                  <h3 className="font-bold text-slate-200  hover:text-red-500">
                     {item.title}
                   </h3>
                 </a>
-              )
+              );
             })}
           </div>
           <div className=" flex flex-col gap-3 mt-4">
@@ -124,30 +127,30 @@ const Footer = () => {
                 >
                   <div className="text-4xl text-blue-700 ">{item.icon}</div>
                   <div className="flex flex-col gap-2">
-                    <h2 className="font-bold text-white hover:text-blue-700 text-xl tracking-wide">
+                    <h2 className="font-bold text-white hover:text-red-500 tracking-wide">
                       {item.title}
                     </h2>
                     <a
                       href={item.url}
-                      className="text-slate-200 hover:text-blue-700"
+                      className="text-slate-200 hover:text-red-500"
                     >
                       {item.content}
                     </a>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
       <hr className="my-10" />
 
-      <p className="flex items-center justify-center text-slate-200 py-8">
+      <p className="flex items-center justify-center text-slate-200 py-6">
         Copyright {new Date().getFullYear()} © All Right Reserved Design by
         Rometheme
       </p>
     </section>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
