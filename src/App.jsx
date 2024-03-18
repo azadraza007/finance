@@ -3,14 +3,16 @@ import Footer from "./component/Footer";
 import Hero from "./component/Hero";
 import FAQ from "./component/FAQ";
 import Service from "./component/Service";
+import WhyChooseUs from "./component/whyChoooseUs";
 function App() {
-   return (
+  return (
     <>
       <Navbar />
       <Hero />
-      <FAQ />
-      <Service/>
 
+      <Service />
+      <WhyChooseUs />
+      <FAQ />
       <Footer />
     </>
   );
