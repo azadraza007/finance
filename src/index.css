@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.card:hover {
+  background: #006f93;
+  transition: 1s;
+  color:white;
+}
+/* .card:hover .icon,
+.title,
+.content {
+  color: white !important;
+} */

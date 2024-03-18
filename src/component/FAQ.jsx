@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const FAQ = () => {
   const [answersVisibility, setAnswersVisibility] = useState({
@@ -6,69 +6,81 @@ const FAQ = () => {
     answer2: false,
     answer3: false,
     answer4: false,
-  });
+  })
 
   const toggleAnswer = (id) => {
     setAnswersVisibility((prevState) => ({
       ...prevState,
       [id]: !prevState[id],
-    }));
-  };
+    }))
+  }
   return (
     <>
-      <section className="py-7 bg-red-500 sm:py-10 lg:py-24">
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+      <section
+        className="p-10  flex flex-col gap-4"
+        style={{ background: '#006f93' }}
+      >
+        <div className=" grid grid-cols-1 gap-4 lg:grid-cols-2 my-10">
+          <div className="flex flex-col gap-6">
+            <h3 className="font-bold text-slate-500 ">FAQ</h3>
+            <h2 className="text-4xl font-bold leading-tight text-white lg:text-5xl">
               The Most Questions
             </h2>
           </div>
-          <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
-            {[1, 2, 3, 4].map((index) => (
-              <div
-                key={`question${index}`}
-                className="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+          <p className="text-slate-300">
+            Proin laoreet nisi vitae pharetra mattis. Etiam luctus suscipit
+            velit vitae mixue ultricies. Augue molestie a etiam quis tincidunt
+            est, et efficitur ipsum nunc bibendum ut risus et vehicula proin
+            tempus tellus diam laoreet justo donec tempus.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 ">
+          {[1, 2, 3, 4].map((index) => (
+            <div
+              key={`question${index}`}
+              className=" rounded transition-all duration-200  border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+            >
+              <button
+                type="button"
+                onClick={() => toggleAnswer(`answer${index}`)}
+                className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
               >
-                <button
-                  type="button"
-                  onClick={() => toggleAnswer(`answer${index}`)}
-                  className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
+                <span className="flex text-lg font-semibold text-black">
+                  Question {index}
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className={`w-6 h-6 text-black ${
+                    answersVisibility[`answer${index} `]
+                      ? 'transform rotate-0'
+                      : 'transform rotate-180'
+                  }`}
                 >
-                  <span className="flex text-lg font-semibold text-black">
-                    Question {index}
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className={`w-6 h-6 text-gray-400 ${
-                      answersVisibility[`answer${index}`]
-                        ? "transform rotate-0"
-                        : "transform rotate-180"
-                    }`}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </button>
-                <div
-                  style={{
-                    display: answersVisibility[`answer${index}`]
-                      ? "block"
-                      : "none",
-                  }}
-                  className="px-4 pb-5 sm:px-6 sm:pb-6"
-                >
-                  <p>Answer to Question {index}</p>
-                </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                style={{
+                  display: answersVisibility[`answer${index}`]
+                    ? 'block'
+                    : 'none',
+                }}
+                className="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p>Answer to Question {index}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+
           <p className="text-center text-gray-600 text-base mt-9">
             Still have questions?
             <span className="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover-underline">
@@ -78,7 +90,7 @@ const FAQ = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default FAQ;
+export default FAQ
