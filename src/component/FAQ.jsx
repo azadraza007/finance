@@ -14,13 +14,11 @@ const FAQ = () => {
       [id]: !prevState[id],
     }));
   };
+
   return (
     <>
-      <section
-        className="p-10  flex flex-col gap-4 h-screen mb-10 bg-gradient-to-b from-blue-500 to-gray-600"
-        //style={{ background: "#006f93" }}
-      >
-        <div className=" grid grid-cols-1 gap-4 lg:grid-cols-2 my-10">
+      <section className="p-4 lg:p-10 flex flex-col gap-4 mb-10 bg-gradient-to-b from-blue-500 to-gray-600">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 my-10">
           <div className="flex flex-col gap-6">
             <h3 className="font-bold text-white text-2xl">FAQ</h3>
             <h2 className="text-4xl font-bold leading-tight text-white lg:text-5xl">
@@ -39,7 +37,7 @@ const FAQ = () => {
           {[1, 2, 3, 4].map((index) => (
             <div
               key={`question${index}`}
-              className=" rounded transition-all duration-200  border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+              className="rounded transition-all duration-200 border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
             >
               <button
                 type="button"
@@ -55,7 +53,7 @@ const FAQ = () => {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className={`w-6 h-6 text-black ${
-                    answersVisibility[`answer${index} `]
+                    answersVisibility[`answer${index}`]
                       ? "transform rotate-0"
                       : "transform rotate-180"
                   }`}
@@ -81,7 +79,7 @@ const FAQ = () => {
             </div>
           ))}
 
-          <p className="text-center text-white text-base mt-9 ">
+          <p className="text-center text-white text-base mt-9">
             Still have questions ?
             <span className="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover-underline">
               Contact our support
