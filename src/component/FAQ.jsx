@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const FAQ = () => {
   const [answersVisibility, setAnswersVisibility] = useState({
@@ -6,23 +6,23 @@ const FAQ = () => {
     answer2: false,
     answer3: false,
     answer4: false,
-  })
+  });
 
   const toggleAnswer = (id) => {
     setAnswersVisibility((prevState) => ({
       ...prevState,
       [id]: !prevState[id],
-    }))
-  }
+    }));
+  };
   return (
     <>
       <section
-        className="p-10  flex flex-col gap-4"
-        style={{ background: '#006f93' }}
+        className="p-10  flex flex-col gap-4 h-screen mb-10 bg-gradient-to-b from-blue-500 to-gray-600"
+        //style={{ background: "#006f93" }}
       >
         <div className=" grid grid-cols-1 gap-4 lg:grid-cols-2 my-10">
           <div className="flex flex-col gap-6">
-            <h3 className="font-bold text-slate-500 ">FAQ</h3>
+            <h3 className="font-bold text-white text-2xl">FAQ</h3>
             <h2 className="text-4xl font-bold leading-tight text-white lg:text-5xl">
               The Most Questions
             </h2>
@@ -56,8 +56,8 @@ const FAQ = () => {
                   stroke="currentColor"
                   className={`w-6 h-6 text-black ${
                     answersVisibility[`answer${index} `]
-                      ? 'transform rotate-0'
-                      : 'transform rotate-180'
+                      ? "transform rotate-0"
+                      : "transform rotate-180"
                   }`}
                 >
                   <path
@@ -71,8 +71,8 @@ const FAQ = () => {
               <div
                 style={{
                   display: answersVisibility[`answer${index}`]
-                    ? 'block'
-                    : 'none',
+                    ? "block"
+                    : "none",
                 }}
                 className="px-4 pb-5 sm:px-6 sm:pb-6"
               >
@@ -81,8 +81,8 @@ const FAQ = () => {
             </div>
           ))}
 
-          <p className="text-center text-gray-600 text-base mt-9">
-            Still have questions?
+          <p className="text-center text-white text-base mt-9 ">
+            Still have questions ?
             <span className="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover-underline">
               Contact our support
             </span>
@@ -90,7 +90,7 @@ const FAQ = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;
