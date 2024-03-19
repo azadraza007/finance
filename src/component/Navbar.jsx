@@ -24,7 +24,7 @@ const Navbar = () => {
     <>
       <div
         className="flex justify-between items-center px-4 lg:px-8 py-2 lg:py-4"
-        style={{ backgroundColor: "#016e95" }}
+        style={{ backgroundColor: "#016f94" }}
       >
         <div className="text-white hover:cursor-pointer">
           <h2 className="font-bold">COUNTRIES</h2>
@@ -50,7 +50,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="bg-red-500 flex justify-between items-center px-4 lg:px-8 py-2 lg:py-1">
+      <div className="bg-gray-400 flex justify-between items-center px-4 lg:px-8 py-2 lg:py-1">
         <div className="item-center ">
           <img
             src={navbarImg}

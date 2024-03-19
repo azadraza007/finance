@@ -147,7 +147,7 @@ const Footer = () => {
 
       <p className="flex items-center justify-center text-slate-200 py-6">
         Copyright {new Date().getFullYear()} © All Right Reserved Design by
-        Rometheme
+        Mohammad Raza
       </p>
     </section>
   );
