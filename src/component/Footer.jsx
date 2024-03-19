@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa";
 import { quickLinks, services } from "../data.js";
@@ -6,6 +6,8 @@ import { CiPhone } from "react-icons/ci";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { GrMapLocation } from "react-icons/gr";
 import { nanoid } from "nanoid";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export let info = [
   {
     id: nanoid(),
@@ -31,9 +33,14 @@ export let info = [
   },
 ];
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({ duration: "1000" });
+  }, []);
   return (
     <section style={{ backgroundColor: "#016e95" }}>
       <div
+        data-aos="fade-up"
+        // data-aos-duration="3000"
         className="w-100 py-4 px-2 grid grid-cols-1 lg:grid-cols-2 gap-2"
         style={{ backgroundColor: "#016e95" }}
       >

@@ -1,58 +1,66 @@
-import { nanoid } from 'nanoid'
-import React from 'react'
-import { FaBookOpen } from 'react-icons/fa'
-import { FaBook } from 'react-icons/fa'
-import { FaArrowRight } from 'react-icons/fa'
+import { nanoid } from "nanoid";
+import React, { useEffect } from "react";
+import { FaBookOpen } from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 let cardData = [
   {
     id: nanoid(),
     icon: <FaBook />,
-    title: 'Bookkeeping',
-    content: 'Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.',
-    link: '#',
+    title: "Bookkeeping",
+    content: "Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.",
+    link: "#",
   },
   {
     id: nanoid(),
     icon: <FaBook />,
-    title: 'Bookkeeping',
-    content: 'Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.',
-    link: '#',
+    title: "Bookkeeping",
+    content: "Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.",
+    link: "#",
   },
   {
     id: nanoid(),
     icon: <FaBook />,
-    title: 'Bookkeeping',
-    content: 'Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.',
-    link: '#',
+    title: "Bookkeeping",
+    content: "Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.",
+    link: "#",
   },
   {
     id: nanoid(),
     icon: <FaBook />,
-    title: 'Bookkeeping',
-    content: 'Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.',
-    link: '#',
+    title: "Bookkeeping",
+    content: "Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.",
+    link: "#",
   },
   {
     id: nanoid(),
     icon: <FaBook />,
-    title: 'Bookkeeping',
-    content: 'Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.',
-    link: '#',
+    title: "Bookkeeping",
+    content: "Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.",
+    link: "#",
   },
   {
     id: nanoid(),
     icon: <FaBook />,
-    title: 'Bookkeeping',
-    content: 'Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.',
-    link: '#',
+    title: "Bookkeeping",
+    content: "Proin laoreet nisi vitae et velunto phare mattis lorem tristiq.",
+    link: "#",
   },
-]
+];
 
 const Service = () => {
+  useEffect(() => {
+    AOS.init({ duration: "2000", delay: "2000" });
+  }, []);
   return (
-    <section className="py-10 px-6 flex items-center flex-col justify-center gap-4">
+    <section
+      className="py-10 px-6 flex items-center flex-col justify-center gap-4"
+      data-aos="fade-right"
+    >
       <div className="flex flex-col gap-4 items-center justify-center">
-        <h4 className="text-xl font-bold " style={{ color: '#006f93' }}>
+        <h4 className="text-xl font-bold " style={{ color: "#006f93" }}>
           OUR SERVICES
         </h4>
         <h5 className="text-3xl text-center font-semibold">
@@ -69,9 +77,10 @@ const Service = () => {
         {cardData.map((item) => {
           return (
             <div
+              data-aos="fade-left"
               className="card flex flex-col gap-4 card border-slate-600 p-8 rounded"
               key={item.id}
-              style={{ border: '1px solid #006f93' }}
+              style={{ border: "1px solid #006f93" }}
             >
               <div className="icon text-3xl text-sky-500 ">{item.icon}</div>
               <h1 className="title text-2xl ">{item.title}</h1>
@@ -83,14 +92,14 @@ const Service = () => {
                 <span>Read more</span>
                 <span>
                   <FaArrowRight />
-                </span>{' '}
+                </span>{" "}
               </a>
             </div>
-          )
+          );
         })}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Service
+export default Service;

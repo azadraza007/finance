@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroImg from "../assets/heroImg.jpg";
 import { FaExternalLinkAlt } from "react-icons/fa";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({ duration: "1000" });
+  }, []);
   return (
     <div
       style={{
@@ -17,7 +21,7 @@ const Hero = () => {
         padding: "0 20px",
       }}
     >
-      <div className="ml-6">
+      <div className="ml-6" data-aos="fade-right">
         <h2 className="font-bold mt-8">WELCOME TO GAUDIT</h2>
         <div className="">
           <h1
